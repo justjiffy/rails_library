@@ -1,0 +1,14 @@
+<h1> <%= @book.title %> </h1>
+
+<% the_id = @book.author_id  %>
+<% this_author = @authors.find(the_id) %>
+
+<p><strong>Author:</strong> <%= this_author.f_name %> <%= this_author.l_name %></p>
+
+<p><strong>About This Book:</strong> <%= @book.desc %> </p>
+
+<p><strong>Published by:</strong> <%= @book.publisher %> <%= @book.copyright %></p>
+<p><strong>Language Available:</strong> <%= @book.language %> </p>
+<p><strong>ISNB:</strong> <%= @book.isbn %> </p>
+
+<%= link_to "See All Books", books_path %>

@@ -1,0 +1,10 @@
+<h1>See All Books</h1>
+
+<% @books.each do |f| %>
+<%= link_to f.title, f %><br>
+
+<% end %>
+
+<p>The ability to add books will be here</p>
+
+<%= link_to "See Authors List", authors_path %>

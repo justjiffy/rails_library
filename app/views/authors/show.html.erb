@@ -1,0 +1,7 @@
+<h1> <%= @author.f_name %> <%= @author.l_name %> </h1>
+
+<% auth_id = @author.id %>
+
+<p>Born: <%= @author.dob %></p>
+<p>Books by this Author:  <%= @books %> </p>
+<p><%= link_to "Back to All Authors", authors_path %>

@@ -1,0 +1,9 @@
+<h1>See All Authors</h1>
+<% @authors.each do |author| %>
+<% fullname = author.f_name + " " + author.l_name %><br> 
+
+<%= link_to fullname, author %>
+
+<% end %>
+<br><br>
+<%= link_to "See Books List", books_path %>

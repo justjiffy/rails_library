@@ -10,7 +10,7 @@ living = [true, false]
 
 authors = []
 
-25.times do
+50.times do
 	all_authors = Author.create ( {f_name: Faker::Name.first_name, 
 		l_name:Faker::Name.last_name, 
 		dob: Faker::Date.backward(10000), 
@@ -22,7 +22,7 @@ end
 
 
 #TO DO - Update this so that the book model has a author_id row
-50.times do 
+250.times do 
 	@all_books = Book.create ( {title: Faker::Book.title, 
 		author_id: authors.sample.id, 
 		publisher: Faker::Book.publisher, 

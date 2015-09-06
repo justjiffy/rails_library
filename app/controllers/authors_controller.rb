@@ -6,7 +6,7 @@ class AuthorsController < ApplicationController
   def show
   	@author = Author.find(params[:id])
   	@book_array = Book.where("author_id = ?", @author)
-  	@books = @book_array.to_sentence	
+    @books = @book_array.map(&:title)
   end
   
 

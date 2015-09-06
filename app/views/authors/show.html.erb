@@ -3,6 +3,7 @@
 <% auth_id = @author.id %>
 
 <p>Born: <%= @author.dob %></p>
-<p>Books by this Author:  <% books = @book_array.to_sentence %> 
-	<%= books %></p>
+
+<p>Books by this Author:<br> <% @books.each do |x| %> <li><%= x %></li> <% end %> </p>
+
 <p><%= link_to "Back to All Authors", authors_path %>

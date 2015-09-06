@@ -5,7 +5,8 @@ class AuthorsController < ApplicationController
   
   def show
   	@author = Author.find(params[:id])
-  	@books = [Book.where("author_id = ?", @author)]
+  	@book_array = Book.where("author_id = ?", @author)
+  	@books = @book_array.to_sentence	
   end
   
 

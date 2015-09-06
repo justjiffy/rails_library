@@ -1,9 +1,8 @@
 <h1> <%= @book.title %> </h1>
 
-<% the_id = @book.author_id  %>
-<% this_author = @authors.find(the_id) %>
+<% this_author = @authors.find(@book.author_id) %>
 
-<p><strong>Author:</strong> <%= this_author.f_name %> <%= this_author.l_name %></p>
+<p><strong>Author:</strong> <%= link_to this_author.f_name+" "+this_author.l_name, author_path(@book.author_id) %></p>
 
 <p><strong>About This Book:</strong> <%= @book.desc %> </p>
 

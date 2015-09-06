@@ -4,6 +4,7 @@
 
 <p>Born: <%= @author.dob %></p>
 
-<p>Books by this Author:<br> <% @books.each do |x| %> <li><%= x %></li> <% end %> </p>
+<p>Books by this Author:<br> <% @books.each do |x| %> 
+	<li><%= link_to x[:name], book_path(x) %></li> <% end %> </p>
 
 <p><%= link_to "Back to All Authors", authors_path %>

@@ -1,12 +1,40 @@
-<h1> <%= @author.f_name %> <%= @author.l_name %> </h1>
+<head>
+	<link rel="stylesheet" type="text/css" href="app/assets/stylesheets/application.css" />
+</head>
 
-<% auth_id = @author.id %>
+<body>
 
-<p>Born: <%= @author.dob %></p>
+<header>
+	<h1>The Public Library</h1>
+	<hr />
+	
+	<div class="aside">
+		<%= image_tag("logo.jpg") %><br>
+		<%= link_to "HOME", root_path %><br>
+		<%= link_to "ABOUT", about_path %><br>
+		<%= link_to "BOOKS", books_path %><br>
+		<%= link_to "AUTHORS", authors_path %><br> 
+		<%= link_to "EVENTS", events_path %><br>
+		<%= link_to "CONTACT", contact_path %><br>
+	</div>
+</header>
 
-<p>Books by this Author:<br> <% @books.each do |x| %> 
-	<li><%= link_to x[:name], book_path(x) %></li> <% end %> </p>
+<div class="main_content">
+	<h2> <%= @author.f_name %> <%= @author.l_name %> </h2>
 
-<p><%= link_to "Back to All Authors", authors_path %>
+	<% auth_id = @author.id %>
 
-<p><%= link_to "Edit this Author", edit_author_path %>
+	<p>Born: <%= @author.dob %></p>
+
+	<p>Books by this Author:<br> <% @books.each do |x| %> 
+		<li><%= link_to x[:name], book_path(x) %></li> <% end %> </p>
+
+	<p><%= link_to "Back to All Authors", authors_path %>
+
+	<p><%= link_to "Edit this Author", edit_author_path %>
+
+</div>
+<footer>
+	Labor Day Weekend Project By: Juli Emmel
+</footer>
+</body>

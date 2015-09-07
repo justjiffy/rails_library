@@ -1,11 +1,40 @@
-<h1>See All Books</h1>
+<head>
+	<link rel="stylesheet" type="text/css" href="app/assets/stylesheets/application.css" />
+</head>
+
+<body>
+
+<header>
+	<h1>The Public Library</h1>
+</header>
+
+<div class="aside">
+	<%= image_tag("logo.jpg") %><br>
+	<%= link_to "HOME", root_path %><br>
+	<%= link_to "ABOUT", about_path %><br>
+	<%= link_to "BOOKS", books_path %><br>
+	<%= link_to "AUTHORS", authors_path %><br> 
+	<%= link_to "EVENTS", events_path %><br>
+	<%= link_to "CONTACT", contact_path %><br>
+</div>
+
+<hr />
+
+<div class="main_content">
+
+<h2>See All Books</h2>
 
 <% @books.each do |f| %>
-<%= link_to f.title, f %><br>
+<li><%= link_to f.title, f %></li>
 
 <% end %>
 
-<p>The ability to add books will be here</p>
+<p><%= link_to "Add Book", new_book_path %>
+</p>
+</div>
 
-<%= link_to "See Authors List", authors_path %><br>
-<%= link_to "Add Book", new_book_path %>
+<footer>
+	Labor Day Weekend Project By: Juli Emmel
+</footer>
+
+</body>

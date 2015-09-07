@@ -1,14 +1,44 @@
-<h1> <%= @book.title %> </h1>
+<head>
+	<link rel="stylesheet" type="text/css" href="app/assets/stylesheets/application.css" />
+</head>
 
-<% this_author = @authors.find(@book.author_id) %>
+<body>
 
-<p><strong>Author:</strong> <%= link_to this_author.f_name+" "+this_author.l_name, author_path(@book.author_id) %></p>
+<header>
+	<h1>The Public Library</h1>
+</header>
 
-<p><strong>About This Book:</strong> <%= @book.desc %> </p>
+<div class="aside">
+	<%= image_tag("logo.jpg") %><br>
+	<%= link_to "HOME", root_path %><br>
+	<%= link_to "ABOUT", about_path %><br>
+	<%= link_to "BOOKS", books_path %><br>
+	<%= link_to "AUTHORS", authors_path %><br> 
+	<%= link_to "EVENTS", events_path %><br>
+	<%= link_to "CONTACT", contact_path %><br>
+</div>
 
-<p><strong>Published by:</strong> <%= @book.publisher %> <%= @book.copyright %></p>
-<p><strong>Language Available:</strong> <%= @book.language %> </p>
-<p><strong>ISNB:</strong> <%= @book.isbn %> </p>
+<hr />
 
-<%= link_to "See All Books", books_path %>
-<%= link_to "Edit this Book", edit_book_path %>
+<div class="main_content">
+	<h2> <%= @book.title %> </h2>
+
+	<% this_author = @authors.find(@book.author_id) %>
+
+	<p><strong>Author:</strong> <%= link_to this_author.f_name+" "+this_author.l_name, author_path(@book.author_id) %></p>
+
+	<p><strong>About This Book:</strong> <%= @book.desc %> </p>
+
+	<p><strong>Published by:</strong> <%= @book.publisher %> <%= @book.copyright %></p>
+	<p><strong>Language Available:</strong> <%= @book.language %> </p>
+	<p><strong>ISNB:</strong> <%= @book.isbn %> </p>
+	<p>
+		<%= link_to "See All Books", books_path %><br>
+		<%= link_to "Edit this Book", edit_book_path %>
+	</p>
+</div>
+
+<footer>
+	Labor Day Weekend Project By: Juli Emmel
+</footer>
+</body>

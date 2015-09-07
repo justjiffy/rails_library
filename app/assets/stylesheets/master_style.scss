@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:700italic,900,300italic);
+
+$header: 'Lato', sans-serif;
+$paragraph: 'Open Sans', sans-serif;
+
+hr {
+	width: 5px;
+	background-color: black;
+	border: 1px solid black;
+	width: 100%
+}
+
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+h1 {
+	font-family: $header;
+	font-size: 64px;
+	z-index: 0;
+	-webkit-text-stroke-width: 3px outset;
+    -webkit-text-stroke-color: white;
+    padding:0 280px 0 25px;
+}
+
+h2 {
+	font-family: $header;
+	font-size: 28px;
+}
+
+p, li {
+	font-family: $paragraph; 	
+}
+
+header {
+	position: static;
+	top: 0;
+	width: 100%;
+	background-color: white;
+	vertical-align: center;
+	z-index: 0;
+	display: block;
+	margin-bottom: 50px;
+}
+
+.aside {
+	text-align: right;
+	float: right;
+	position: fixed;
+	top:0;
+	right:0;
+	z-index: 1;
+	background-color: white;
+	clear: both;
+}
+
+.aside a {
+	padding-right: 50px; 
+	font-family: $header;
+	font-size: 28px;
+	text-decoration: none;
+	line-height: 50px;
+	color: black;
+}
+
+.aside a:visited {
+	color: black;
+}
+
+.aside a:hover {
+	color: black;
+	font-style: italic;
+	font-weight: 700;
+}
+
+a:hover {
+	color: black;
+	font-style: italic;
+}
+
+a {
+	font-family: $paragraph;
+	text-decoration: none;
+	color: #02698c;
+}
+
+a:visited {
+	color: #02698c;
+}
+
+a:hover {
+	color: #02698c;
+	font-style: italic;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	font-family: $paragraph;
+	font-weight: 700;
+	background-color: black;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+}
+
+.main_content {
+	position: static;
+	display: block;
+	width: 85%;
+	margin: 0 auto;
+	padding-bottom: 500px;
+}

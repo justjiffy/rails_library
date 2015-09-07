@@ -1,0 +1,47 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="app/assets/stylesheets/application.css" />
+</head>
+
+<body>
+
+<header>
+	<h1>The Public Library</h1>
+	<hr />
+	
+	<div class="aside">
+		<%= image_tag("logo.jpg") %><br>
+		<%= link_to "HOME", root_path %><br>
+		<%= link_to "ABOUT", about_path %><br>
+		<%= link_to "BOOKS", books_path %><br>
+		<%= link_to "AUTHORS", authors_path %><br> 
+		<%= link_to "EVENTS", events_path %><br>
+		<%= link_to "CONTACT", contact_path %><br>
+	</div>
+</header>
+
+<div class="main_content">
+	<h2 style="padding-right: 150px;">Welcome to your Public Library Online!</h2>	
+	<div style="float: left; margin-right: 50px; width: 30%">
+		<h2>Browse Books</h2>
+		<% @books.each do |f| %>
+		<li><%= link_to f.title, book_path(f) %></li> 
+		<% end %>
+		<p style="text-align: center"><strong>
+			<%= link_to "See All Books...", books_path %></strong></p>
+	</div>
+	
+	<div style="float: left; width: 30%">
+		<h2>Browse Authors</h2>
+		<% @authors.each do |f| %>
+		<% full_name = f.f_name + " " + f.l_name %>
+		<li><%= link_to full_name, author_path(f) %></li> 
+		<% end %>		
+		<p style="text-align: center"><strong>
+			<%= link_to "See All Authors...", authors_path %></strong></p>
+	</div>
+</div>
+
+<footer>
+	Labor Day Weekend Project By: Juli Emmel
+</footer>
+</body>

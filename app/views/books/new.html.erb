@@ -1,2 +1,42 @@
-<h1>Books#new</h1>
-<p>Find me in app/views/books/new.html.erb</p>
+<head>
+	<link rel="stylesheet" type="text/css" href="app/assets/stylesheets/application.css" />
+</head>
+
+<body>
+
+<header>
+	<h1>The Public Library</h1>
+</header>
+
+<div class="aside">
+	<%= image_tag("logo.jpg") %><br>
+	<%= link_to "HOME", root_path %><br>
+	<%= link_to "ABOUT", about_path %><br>
+	<%= link_to "BOOKS", books_path %><br>
+	<%= link_to "AUTHORS", authors_path %><br> 
+	<%= link_to "EVENTS", events_path %><br>
+	<%= link_to "CONTACT", contact_path %><br>
+</div>
+
+<hr />
+
+<div class="main_content">
+	<h2>Add a New Book!</h2>
+
+	<p><%= form_for @book, url: new_book_path do |f| %>
+   	<div id="entry">
+		Book Title: <%= f.text_field :title %> <br>
+		<br>
+		Author First Name: <%= f.text_field :f_name %> Last Name: <%= f.text_field :l_name %><br>
+		Author ID: <%= f.number_field :author_id %>
+	 </div>
+
+	 <%= f.submit "Add Book" %>
+	 <% end %>
+	</p>
+</div>
+
+<footer>
+	Labor Day Weekend Project By: Juli Emmel
+</footer>
+</body>

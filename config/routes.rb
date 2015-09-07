@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  
+  root 'mains#index' 
+  get '/about' => 'mains#about'
+  get '/events' => 'mains#events'
+  get '/contact' => 'mains#contact'
+
   get 'authors/' => 'authors#index'
   get 'books/' => 'books#index' 
   get 'books/new' => 'books#new', as: :new_book

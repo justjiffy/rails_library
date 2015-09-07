@@ -26,11 +26,9 @@
 
 <% @books.each do |f| %>
 <li><%= link_to f.title, f %></li>
-
 <% end %>
+<li><strong><%= link_to "Add Book", new_book_path %></strong></li>
 
-<p><%= link_to "Add Book", new_book_path %>
-</p>
 </div>
 
 <footer>

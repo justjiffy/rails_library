@@ -29,7 +29,7 @@ class AuthorsController < ApplicationController
 
   def update
   	@author = Author.find(params[:id])
-  	if @author.update_attribuates(author_params)
+  	if @author.update_attributes(author_params)
   		redirect_to authors_path
   	else
   		render :edit

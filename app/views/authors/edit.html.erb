@@ -21,7 +21,14 @@
 
 <div class="main_content">
 	<h2>Edit Author</h2>
-	<p>Find me in app/views/authors/edit.html.erb</p>
+	<%= form_for @author do |f| %>
+			<p>
+			Author's First Name: <%= f.text_field :f_name %> <br><br>
+			Author's Last Name: <%= f.text_field :l_name %> <br><br>
+			DOB: <%= f.date_select :dob %><br><br> 
+			Living?: <%= check_box_tag(:deceased) %><br><br>
+		<%= f.submit "Save Changes" %></p>
+		<% end %>											
 </div>
 
 <footer>

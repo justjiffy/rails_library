@@ -25,13 +25,12 @@
 
 	<p><%= form_for @book, url: new_book_path do |f| %>
    	<div id="entry">
-		Book Title: <%= f.text_field :title %> <br>
-		<br>
+		Book Title: <%= f.text_field :title %> <br><br>
 		Author First Name: <%= f.text_field :f_name %> Last Name: <%= f.text_field :l_name %><br>
 		Author ID: <%= f.number_field :author_id %>
 	 </div>
 
-	 <%= f.submit "Add Book" %>
+	 <%= f.submit "Add New Book" %>
 	 <% end %>
 	</p>
 </div>

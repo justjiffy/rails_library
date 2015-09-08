@@ -1,14 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LibraryApp</title>
+  <title>The Public Library</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<h1>The Public Library</h1>
+	<hr />
+	
+	<div class="aside">
+		<%= image_tag("logo.jpg") %><br>
+		<%= link_to "HOME", root_path %><br>
+		<%= link_to "ABOUT", about_path %><br>
+		<%= link_to "BOOKS", books_path %><br>
+		<%= link_to "AUTHORS", authors_path %><br> 
+		<%= link_to "EVENTS", events_path %><br>
+		<%= link_to "CONTACT", contact_path %><br>
+	</div>
 
 <%= yield %>
+
+<footer>
+		Labor Day Weekend Project By: Juli Emmel
+</footer>
 
 </body>
 </html>

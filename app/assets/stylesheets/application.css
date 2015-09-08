@@ -25,6 +25,9 @@ h2 {
 p, li {
   font-family: "Open Sans", sans-serif; }
 
+li {
+  margin-left: 50px; }
+
 header {
   position: static;
   top: 0;
@@ -62,20 +65,27 @@ header {
   font-weight: 700; }
 
 a:hover {
-  color: black;
+  color: #0082fc;
   font-style: italic; }
 
 a {
   font-family: "Open Sans", sans-serif;
   text-decoration: none;
-  color: #02698c; }
+  color: #0082fc;
+  padding-right: 25px; }
 
 a:visited {
-  color: #02698c; }
+  color: #0082fc;
+  padding-right: 25px; }
 
 a:hover {
-  color: #02698c;
-  font-style: italic; }
+  color: #0082fc;
+  font-style: italic;
+  padding-right: 25px; }
+
+.bottom_links {
+  float: right;
+  margin-right: 25px; }
 
 footer {
   position: fixed;
@@ -91,8 +101,8 @@ footer {
 .main_content {
   position: static;
   display: block;
-  width: 85%;
-  margin: 0 auto;
+  width: 75%;
+  margin-left: 100px;
   padding-bottom: 500px; }
 
 /*# sourceMappingURL=application.css.map */

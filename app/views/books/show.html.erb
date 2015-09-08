@@ -1,25 +1,3 @@
-<head>
-	<link rel="stylesheet" type="text/css" href="app/assets/stylesheets/application.css" />
-</head>
-
-<body>
-
-<header>
-	<h1>The Public Library</h1>
-</header>
-
-<div class="aside">
-	<%= image_tag("logo.jpg") %><br>
-	<%= link_to "HOME", root_path %><br>
-	<%= link_to "ABOUT", about_path %><br>
-	<%= link_to "BOOKS", books_path %><br>
-	<%= link_to "AUTHORS", authors_path %><br> 
-	<%= link_to "EVENTS", events_path %><br>
-	<%= link_to "CONTACT", contact_path %><br>
-</div>
-
-<hr />
-
 <div class="main_content">
 	<h2> <%= @book.title %> </h2>
 
@@ -29,16 +7,11 @@
 
 	<p><strong>About This Book:</strong> <%= @book.desc %> </p>
 
-	<p><strong>Published by:</strong> <%= @book.publisher %> <%= @book.copyright %></p>
-	<p><strong>Language Available:</strong> <%= @book.language %> </p>
-	<p><strong>ISNB:</strong> <%= @book.isbn %> </p>
-	<p>
-		<%= link_to "See All Books", books_path %><br>
-		<%= link_to "Edit this Book", edit_book_path %>
+	<p><strong>Published by:</strong> <%= @book.publisher %> (<%= @book.copyright %>)</p>
+	<p><strong>Language(s) Available:</strong> <%= @book.language %> </p>
+	<p><strong>ISBN:</strong> <%= @book.isbn %> </p>
+	<p class="bottom_links"><strong><%= link_to "See All Books...", books_path %><span width="25px"></span>
+		<%= link_to "Edit this Book...", edit_book_path %>
+		<%= link_to "Delete this Book...", book_path, method: :delete, data: { confirm: "Confirm Delete? You cannot undo this task!" } %></strong>
 	</p>
 </div>
-
-<footer>
-	Labor Day Weekend Project By: Juli Emmel
-</footer>
-</body>

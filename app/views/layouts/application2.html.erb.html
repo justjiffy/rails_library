@@ -8,13 +8,13 @@
 </head>
 <body>
 
-
-<h1>The Public Library</h1>
+<%= render "shared/header" %>
+	
+<h1>The First Page of Public Library</h1>
 	<hr />
 	
 	<div class="aside">
-		<div class="<%= active_class(root_path) %>">
-			<%= image_tag("logo.jpg") %></div>
+		<%= image_tag("logo.jpg") %><br>
 		<%= link_to "HOME", root_path %><br>
 		<%= link_to "ABOUT", about_path %><br>
 		<%= link_to "BOOKS", books_path %><br>
@@ -22,6 +22,7 @@
 		<%= link_to "EVENTS", events_path %><br>
 		<%= link_to "CONTACT", contact_path %><br>
 	</div>
+
 <%= yield %>
 
 <footer>

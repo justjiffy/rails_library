@@ -4,6 +4,11 @@
 $header: 'Lato', sans-serif;
 $paragraph: 'Open Sans', sans-serif;
 
+.active {
+	color: blue;
+	font-size: 20px;
+}
+
 hr {
 	width: 5px;
 	background-color: black;
